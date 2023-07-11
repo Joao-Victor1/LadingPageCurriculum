@@ -1,6 +1,8 @@
 //Módulos Internos:
 import {Erros, Sucessos, Avisos} from './mensagens.js'
 import createCategory from './categorias.js';
+import addData from './dados.js';
+import getCategoryData from './view_data.js';
 
 //Módulos Externos:
 import inquirer from "inquirer";
@@ -40,9 +42,13 @@ function menu(){
                 
             }
             else if(action === 'Consultar Informações'){
+                aviso.exibirMensagem(3);
+                getCategoryData();
                 return;
             }
             else if(action === 'Inserir Dados'){
+                aviso.exibirMensagem(3);
+                addData();
                 return;
             }
             else if(action === 'Sair'){

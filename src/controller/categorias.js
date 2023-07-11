@@ -37,7 +37,7 @@ function createCategory(){
                 return;
             }
 
-            fs.writeFileSync(`${path}/${categoryName}.json`, '{"dados": []}', function(err){
+            fs.writeFileSync(`${path}/${categoryName}.json`, '{"id": 0, "data": "data"}', function(err){
                 console.log(err);
             });
 
